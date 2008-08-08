@@ -10,13 +10,18 @@ At the moment, the following APIs are supported:
   - StumbleUpon
   - del.icio.us
 
+After install the plugin run the following rake task to setup assets used by ShareThis:
+
+  rake share_this:setup
+
+And remember to include ShareThis stylesheet in your views using share_this method. 
+
 Example
 =======
 
 The following will render in the view the links to share the current page with the defaults settings of ShareThis.
 
 <%= share_this %>
-
 
 self-explanatory example:
 <%= share_this(:include => [:facebook, :digg], :discard_image => true,

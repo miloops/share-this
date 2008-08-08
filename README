@@ -1,0 +1,38 @@
+ShareThis
+=========
+
+Simple plugin to share pages with most popular social sites.
+
+At the moment, the following APIs are supported:
+  - Facebook
+  - Digg
+  - MySpace
+  - StumbleUpon
+  - del.icio.us
+
+Example
+=======
+
+The following will render in the view the links to share the current page with the defaults settings of ShareThis.
+
+<%= share_this %>
+
+
+self-explanatory example:
+<%= share_this(:include => [:facebook, :digg], :discard_image => true,
+               :url => article_path(article),
+               :title => article.title) %>
+
+
+Discarding the images is also possible:
+<%= share_this(:discard_image => true) %>
+
+TODO
+====
+- Improve documentation
+- Remove document.title and javascript when getting the page title with Rails becomes possible.
+- Add more APIs.
+
+Feedback? Comments? Bugs? Drop me a line to miloops (at) gmail (dot) com 
+
+Copyright (c) 2008 Emilio Tagua, released under the MIT license
